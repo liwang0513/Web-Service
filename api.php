@@ -27,7 +27,7 @@ function get_student_info($id) {
 	
 }
 
-function get_studnet_list() {
+function get_student_list() {
 	
 	$student_list = array(array("id" => 1, "name" => "Dale Cooper"),
                           array("id" => 2, "name" => "Harry Truman"),
@@ -39,6 +39,8 @@ function get_studnet_list() {
 	
 }
 
+
+
 if (isset($_GET["action"])) {
 	
 	switch($_GET["action"]) {
@@ -48,7 +50,7 @@ if (isset($_GET["action"])) {
 			break;
 		
 		case "get_student":
-			$value = get_student_info();
+			$value = get_student_info($_GET["id"]);
 			break;
 	}
 
